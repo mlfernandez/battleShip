@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- css import file-->
+    <link href='https://fonts.googleapis.com/css?family=IBM Plex Mono' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">  
+    <link href="css/stylestest.css" rel="stylesheet" type="text/css">
+
+
+</head>
+<body>
+
+<div class="container">
+    <div class="grid gridUser"></div>
+    <div class="grid gridComputer"></div>
+</div>
+
+<div class="hiddenInfo">
+    <button id="start">Start Game</button>
+    <button id="rotate">Rotate your Ships</button>
+    <h3 id="whoseGo">Your turn</h3>
+    <h3 id="info"></h3>
+</div>
+
+<div class="gridDisplay">
+    <div class="ship destroyedContainer" draggable="true">
+        <div id="destroyed-0"></div>
+        <div id="destroyed-1" ></div>
+    </div>
+    <div class="ship sumarineContainer" draggable="true">
+        <div id="submarine-0"></div>
+        <div id="submarine-1" ></div>
+        <div id="submarine-2" ></div>
+    </div>
+    <div class="ship crusierContainer" draggable="true">
+        <div id="crusier-0"></div>
+        <div id="crusier-1" ></div>
+        <div id="crusier-2" ></div>
+    </div>
+    <div class="ship battleshipContainer" draggable="true">
+        <div id="battleship-0"></div>
+        <div id="battleship-1" ></div>
+        <div id="battleship-2" ></div>
+        <div id="battleship-3" ></div>
+    </div>
+    <div class="ship carrierContainer" draggable="true">
+        <div id="carrier-0"></div>
+        <div id="carrier-1" ></div>
+        <div id="carrier-2" ></div>
+        <div id="carrier-3" ></div>
+        <div id="carrier-4" ></div>
+    </div>
+</div>
+
+
+    <!-- javascript import file-->
+    <script src="js/mainTest.js"></script> 
+    
+</body>
+</html>
