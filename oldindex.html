@@ -10,19 +10,19 @@
     <link href='https://fonts.googleapis.com/css?family=IBM Plex Mono' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">  
-    <link href="css/stylesbackup.css" rel="stylesheet" type="text/css">
+    <link href="css/oldstyles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <!-- PANTALLA INICIO-->
-    <div id="idPantalla0" class="logoscreen">
+    <div id="idPantalla0" class="screen0">
         <h1>BATTLESHIP</h1>
             <div class="press">
-                <p onclick="hiddenFunction()"></onclick>Press any key to continue</p>
+                <p onclick="hiddenFunction('screen1')">Press any key to continue</p>
             </div>
     </div>
 
     <!--PANTALLA 1-->
-    <div id="idPantalla1" class="screen" style="visibility: hidden">
+    <div id="idPantalla1" class="screen1" style="visibility: hidden">
         <div class="border">
             <div class="textWelcome">
                 <h1>BATTLESHIP</h1>
@@ -31,7 +31,7 @@
             </div>
         </div>
             <div class="press">
-                <p onclick="hiddenFunction()"></onclick>Press any key to continue</p>
+                <p onclick="hiddenFunction('screen2')">Press any key to continue</p>
                 </div>
     </div>
 
@@ -46,7 +46,7 @@
             <br></br>
         </div>
         <div class="press">
-            <p onclick="hiddenFunction()"></onclick>Press any key to continue</p>
+            <p onclick="hiddenFunction('screen3')">Press any key to continue</p>
             </div>
     </div>
 
@@ -64,11 +64,9 @@
             <div id="I" class="zone">I</div>
         </div>
         <div class="press">
-            <p onclick="hiddenFunction()"></onclick>Press any key to continue</p>
-            </div>
+            <p onclick="hiddenFunction('screen0')">Press any key to continue</p>
+        </div>
     </div>
-
-
 </div>
 
 
@@ -77,6 +75,6 @@
 
     
       <!-- javascript import file-->
-      <script src="js/mainTest.js"></script> 
+      <script src="js/oldmain.js"></script> 
 </body>
 </html>

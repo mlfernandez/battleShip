@@ -7,13 +7,13 @@
 
     //document.getElementById("idPantalla1").style.display = "none";
     //document.getElementById("idPantalla2").style.visibility = "visible";
-  }
+  //}
   
 
 
 
-/*
-const hiddenFunction = (pantalla) => {
+
+/*const hiddenFunction = (pantalla) => {
   let arrScreen= ["idPantalla0", "idPantalla1", "idPantalla2", "idPantalla3"];
 
   arrScreen = arrScreen.filter(val => !pantalla.includes(val));
@@ -26,7 +26,6 @@ const hiddenFunction = (pantalla) => {
 
 
 }
-
 */
 
 
