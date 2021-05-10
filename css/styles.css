@@ -20,7 +20,7 @@ body {
     /*margin-top: 20em;*/
     margin-top: 2em;
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
 }
 
 .screen0 h1 {
@@ -39,13 +39,15 @@ body {
 /*PANTALLA 1*/
 
 .screen1 {
-    width: auto;
-    height: 30em;
+    /*width: auto;
+    height: 30em;*/
     position: relative;  
     font-family: 'VT323', monospace;
     text-align: center;
     font-size: 1.5em;
     margin-top: 2em;
+    width: 100vh;
+    height: 90vh;
 }
 
 .screen1 h1 { 
@@ -104,8 +106,8 @@ body {
 /*PANTALLA 2 JUGADORES*/
 
 .screen2 {
-    width: auto;
-    height: 30em;
+    /*width: auto;
+    height: 30em;*/
     position: relative;  
     font-family: 'VT323', monospace;
     text-align: center;
@@ -113,32 +115,45 @@ body {
     color: rgb(214, 214, 214);
     margin-top: 5em;
     letter-spacing: 0.1em;
+    width: 100vw;
+    height: 90vhh;
 
 }
 
 /*PANTALLA 3 TABLERO */
+
+.screen3 {
+    padding: 1rem; 
+    margin-top: 5em;
+    width: 95vw;
+    height: 80vh;
+}
 
 .zone {
     background-color: grey;
     color: white;
     padding: 1rem;
     height: 4rem;
-    padding: 1rem; 
+    border: black solid;
+    text-align: center;
+    font-size: 4em;
+    font-family: 'VT323', monospace;
+    
   }
   
-  .board {
-    width: auto;
+.board {
+    max-width: 25em;
+    margin: 0 auto;
     display: grid;
     grid-gap: 1rem;
   }
   
   /* Screen larger than 600px? 2 column */
-  @media (min-width: 600px) {
+@media (min-width: 600px) {
     .board { grid-template-columns: repeat(2, 1fr); }
   }
   
   /* Screen larger than 900px? 3 columns */
-  @media (min-width: 900px) {
+@media (min-width: 900px) {
     .board { grid-template-columns: repeat(3, 1fr); }
   }
-  
