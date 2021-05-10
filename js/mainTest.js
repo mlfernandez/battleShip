@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const infoDisplay = document.querySelector('#info')
     const userSquares = []
     const computerSquares = []
+    let isHorizontal = true 
 
 
     // Create Board
@@ -36,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'destroyed',
             directions: [
                 [0, 1],
-                [0, width],
+                [0, width]
             ]
         },
         {
@@ -75,15 +76,38 @@ document.addEventListener('DOMContentLoaded', () => {
         let current = ship.directions[randomDirection]
         if (randomDirection === 0) direction = 1
         if (randomDirection === 1) direction = 10
-        let randomStart = Math.floor(Math.random() * computerSquares.length - (ship.directions[0].length * directions))
+        let randomStart = Math.abs(Math.floor(Math.random() * computerSquares.length - (ship.directions[0].length * directions)))
 
         const isTaken = current.some(index => computerSquares[randomStart + index].classList.contains('taken'))
         const isAtRightEdge = current.some(idex => (randomStart + index) % width === width - 1) // el modulo da lo que sig q esta del lado right
         const isAtLeftEdge = current.some(idex => (randomStart + index) % width === 0) // si es del left va a dar 0 el barco esta en el borde
 
-        if (!isTaken && !isAtRightEdge && !isAtLeftEdge) current.forEach(index => computerSquares[randomStart + index].classList.add('taken', ships.name)
+        if (!isTaken && !isAtRightEdge && !isAtLeftEdge) current.forEach(index => computerSquares[randomStart + index].classList.add('taken', ships.name))
+   
+        else generate(ship)
+   
     }
 
+    generate(shipArray[0])
+    generate(shipArray[1])
+    generate(shipArray[2])
+    generate(shipArray[3])
+    generate(shipArray[4])
 
 
+    /// rotate ships
+
+    function rotate() {
+        if (isHorizontal) { 
+            destroyed.classList.toggle('destroyerConteinerVertical')
+            submarine.classList.toggle('destroyerConteinerVertical')
+            crusier.classList.toggle('destroyerConteinerVertical')
+            battleship.classList.toggle('destroyerConteinerVertical')
+            carrier.classList.toggle('destroyerConteinerVertical')
+            isHorizontal = false
+        }
+
+    }
+    rotateButton.addEventListener('click', rotate)
 })
+
