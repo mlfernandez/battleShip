@@ -106,8 +106,6 @@ body {
 /*PANTALLA 2 JUGADORES*/
 
 .screen2 {
-    /*width: auto;
-    height: 30em;*/
     position: relative;  
     font-family: 'VT323', monospace;
     text-align: center;
@@ -117,13 +115,27 @@ body {
     letter-spacing: 0.1em;
     width: 100vw;
     height: 90vhh;
+ }
 
+.textInstruction {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.screen2 h3 {
+    color: rgb(214, 214, 214);
+    width: 30em;
+    height: 10em;
+    text-align: center;
 }
 
 /*PANTALLA 4 CHOOSE SHIP */
 
 .screen3 {
-    height: 100vh;
+    height: 90vh;
     width: 100vh;
 }
 
@@ -132,9 +144,9 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
     width: 100vh;
-    margin-top: -5em;
+    
 }
 
 .shipShowPic {
@@ -169,18 +181,34 @@ body {
     color: rgb(214, 214, 214);
     font-family: 'VT323', monospace;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 2em;
+    margin-top: 0.03em;
+    margin-bottom: 0.1em;
 }
-
 
 .screen3 h5 {
     letter-spacing:  0.1em;
     color: rgb(214, 214, 214);
     font-family: 'VT323', monospace;
     text-align: center;
-    font-size: 2em;
-
+    font-size: 2.5em;
 }
+
+.barcos h6 {
+    letter-spacing:  0.1em;
+    color: rgb(214, 214, 214);
+    font-family: 'VT323', monospace;
+    text-align: center;
+    font-size: 1.3em;
+    margin-top: 0.1em;
+}
+
+.textChoose {
+    width: 100vh;
+    height: 1em;
+}
+
+
 /*PANTALLA 4 TABLERO */
 
 .screen4 {

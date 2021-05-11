@@ -40,41 +40,38 @@
 
     <!--PANTALLA 2-->
     <div id="idPantalla2" class="screen2" style="display: none;">
-        <div class="playerOneData">
-            <span class="namePlayerOne"> Name of Player 1 (Default = 'Player 1'):</span>
-            <br></br>
-        </div>
-        <div class="playerTwoData">
-            <span class="namePlayerTwo"> Name of Player 1 (Default = 'Player 2'):</span>
-            <br></br>
+        <div class="textInstruction">
+            <h3>Cada barco tiene un nivel resistencia, para hundirlo tienes que dispararle tantas veces como sea el nivel.</h3>
         </div>
         <div class="press">
-            <!--<p onclick="Hiddenfunction()"></onclick>Press any key to continue</p>-->
             <p>Press any key to continue</p>
             </div>
     </div>
+    
 
     <!--PANTALLA 3-->   
     <div id="idPantalla3" class="screen3" style="display: none;">
-        <h5>Choose your ship</h5>
+        <div class="textChoose">
+            <h5>Choose your ship</h5>
+        </div>
         <div class="barcos">
-            <div class="shipShowPic" id="1" onclick="chooseShip(1)"><img class="picShip" src="img/aicraft.png">
-                <div><p>Level 1</p></div>
+            <div class="shipShowPic" id="1" onclick="chooseShip(1, 'Aircraft')"><img class="picShip" src="img/aicraft.png">
+                <div><p>Aircraft</p></div>
+                <div><h6>Resistencia 1</h6></div>
             </div>
-            <div class="shipShowPic" id="2" onclick="chooseShip(2)"><img class="picShip" src="img/carrier.png">
-                <div><p>Level 2</p></div>
+            <div class="shipShowPic" id="2" onclick="chooseShip(2, 'Carrier')"><img class="picShip" src="img/carrier.png">
+                <div><p>Carrier</p></div>
+                <div><h6>Resistencia 2</h6></div>
             </div>
-            <div class="shipShowPic" id="3" onclick="chooseShip(3)"><img class="picShip" src="img/submarine.png">
-                <div><p>Level 3</p></div>
+            <div class="shipShowPic" id="3" onclick="chooseShip(3, 'Submarine')"><img class="picShip" src="img/submarine.png">
+                <div><p>Submarine</p></div>
+                <div><h6>Resistencia 3</h6></div>
             </div>
-            <div class="shipShowPic" id="4" onclick="chooseShip(4)"><img class="picShip" src="img/war.png">
-                <div><p>Level 4</p></div>
+            <div class="shipShowPic" id="4" onclick="chooseShip(4, 'Warship')"><img class="picShip" src="img/war.png">
+                <div><p>Warship</p></div>
+                <div><h6>Resistencia 4</h6></div>
             </div>
         </div>
-        <!--<div class="press">
-            <p onclick="Hiddenfunction()"></onclick>Press any key to continue</p>
-            <p>Press any key to continue</p>
-        </div>-->
     </div>
 
     <!--PANTALLA 4-->   
@@ -90,15 +87,24 @@
             <div id="8" class="zone">8</div>
             <div id="9" class="zone">9</div>
         </div>
-        <div class="press">
-            <!--<p onclick="Hiddenfunction()"></onclick>Press any key to continue</p>-->
-            <p>Press any key to continue</p>
-        </div>
+
     </div>
+
+        <!--PANTALLA 5-->   
+        <div id="idPantalla5" class="screen5" style="display: none;">
+            <div id="winner"class="winBoard">
+
+            </div>
+            <div class="press">
+                <!--<p onclick="Hiddenfunction()"></onclick>Press any key to continue</p>-->
+                <p>Press any key to restart the game</p>
+            </div>
+        </div>
 </div>
 
 
       <!-- javascript import file-->
       <script src="js/main.js"></script> 
+      <script src="js/game.js"></script> 
 </body>
 </html>
