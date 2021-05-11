@@ -18,6 +18,7 @@ document.addEventListener("keypress", function (event) {
     document.getElementById("idPantalla1").style.display = "none";
     document.getElementById("idPantalla2").style.display = "inline";
     document.getElementById("idPantalla3").style.display = "none";
+    document.getElementById("idPantalla4").style.display = "none";
     pantalla = "screen2";
 
     // cuando entra en pantalla 3
@@ -26,7 +27,19 @@ document.addEventListener("keypress", function (event) {
     document.getElementById("idPantalla1").style.display = "none";
     document.getElementById("idPantalla2").style.display = "none";
     document.getElementById("idPantalla3").style.display = "inline";
+    document.getElementById("idPantalla4").style.display = "none";
     pantalla = "screen3";
+
+    // cuando entra en pantalla 4
+  } else if (pantalla === "screen3") {
+    document.getElementById("idPantalla0").style.display = "none";
+    document.getElementById("idPantalla1").style.display = "none";
+    document.getElementById("idPantalla2").style.display = "none";
+    document.getElementById("idPantalla3").style.display = "none";
+    document.getElementById("idPantalla4").style.display = "inline";
+    pantalla = "screen4";
+  
+  
   } else {
     //alert("falta hacer mas pantallas");
   }
@@ -81,3 +94,23 @@ let barco1 = new Barco("A");
 let barco2 = new Barco("F");
 //alert(barco2.ubicacion);
 
+
+/*
+const chooseShip = (ship) => {
+
+
+  if(barco1.length == 1 && barco2.length == 1){
+
+        ir a la pantalla 4
+
+          }
+          
+      
+      
+      document.getElementById(ship).onclick = "";
+      document.getElementById(ship).className = "seleccionado";
+
+      
+  }
+    
+*/

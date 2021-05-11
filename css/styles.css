@@ -120,9 +120,70 @@ body {
 
 }
 
-/*PANTALLA 3 TABLERO */
+/*PANTALLA 4 CHOOSE SHIP */
 
 .screen3 {
+    height: 100vh;
+    width: 100vh;
+}
+
+.barcos{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vh;
+    margin-top: -5em;
+}
+
+.shipShowPic {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.picShip{
+    width: 20em;
+    height: 20em;
+    border: 0.5em solid white;
+    margin: 1em;
+    transition: 0.5s;
+    object-fit: contain;
+}
+
+.picShip:hover{
+    border: 0.5em solid red;
+    transition: 0.5s;
+    transform: scale(1.1); 
+}
+
+.screen3 .press {
+    margin-top: -10em;
+}
+
+.screen3 p {
+    max-width: 29.5em;
+    letter-spacing:  0.1em;
+    color: rgb(214, 214, 214);
+    font-family: 'VT323', monospace;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+
+.screen3 h5 {
+    letter-spacing:  0.1em;
+    color: rgb(214, 214, 214);
+    font-family: 'VT323', monospace;
+    text-align: center;
+    font-size: 2em;
+
+}
+/*PANTALLA 4 TABLERO */
+
+.screen4 {
     padding: 1rem; 
     margin-top: 5em;
     width: 95vw;

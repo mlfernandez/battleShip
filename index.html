@@ -45,7 +45,7 @@
             <br></br>
         </div>
         <div class="playerTwoData">
-            <span class="namePlayerTwo"> Name of Player 1 (Default = 'Player 1'):</span>
+            <span class="namePlayerTwo"> Name of Player 1 (Default = 'Player 2'):</span>
             <br></br>
         </div>
         <div class="press">
@@ -56,6 +56,29 @@
 
     <!--PANTALLA 3-->   
     <div id="idPantalla3" class="screen3" style="display: none;">
+        <h5>Choose your ship</h5>
+        <div class="barcos">
+            <div class="shipShowPic" id="1" onclick="chooseShip(1)"><img class="picShip" src="img/aicraft.png">
+                <div><p>Level 1</p></div>
+            </div>
+            <div class="shipShowPic" id="2" onclick="chooseShip(2)"><img class="picShip" src="img/carrier.png">
+                <div><p>Level 2</p></div>
+            </div>
+            <div class="shipShowPic" id="3" onclick="chooseShip(3)"><img class="picShip" src="img/submarine.png">
+                <div><p>Level 3</p></div>
+            </div>
+            <div class="shipShowPic" id="4" onclick="chooseShip(4)"><img class="picShip" src="img/war.png">
+                <div><p>Level 4</p></div>
+            </div>
+        </div>
+        <!--<div class="press">
+            <p onclick="Hiddenfunction()"></onclick>Press any key to continue</p>
+            <p>Press any key to continue</p>
+        </div>-->
+    </div>
+
+    <!--PANTALLA 4-->   
+    <div id="idPantalla4" class="screen4" style="display: none;">
         <div id="tablero"class="board">
             <div id="A" class="zone">A</div>
             <div id="B" class="zone">B</div>
