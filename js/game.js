@@ -21,17 +21,42 @@ class Barco {
     }
 }
 
-let barco1 = new Barco("Aircraft",2);
-alert(barco1.zona + barco1.nombre);
-
-//let barco2 = new Barco("F");
-//alert(barco2.ubicacion);
+class Tablero {
+    constructor(zona) {
+      this.zona = zona;
+      this.size = 9;
+    }
+  
+    dibujar() {
+      //mostrar el tablero
+    }
+  
+    asignar() {
+      // asignar ubicacion zona
+    }
+  
+    mostrarHundido() { }
+  
+    mostrarAgua() { }
+  
+    mostrarFuego() { }
+  }
 
 
 const chooseShip = (resistencia, tipoBarco) => {
 
     alert(resistencia + tipoBarco);
-                
+    let barcoJugardo1 = new Barco(tipoBarco, resistencia);
+    let barcoJugardo2 = new Barco(tipoBarco, resistencia);
+    // voy a mostrar la pantalla tablero
+    document.getElementById("idPantalla0").style.display = "none";
+    document.getElementById("idPantalla1").style.display = "none";
+    document.getElementById("idPantalla2").style.display = "none";
+    document.getElementById("idPantalla3").style.display = "none";
+    document.getElementById("idPantalla4").style.display = "inline";
+    document.getElementById("idPantalla5").style.display = "none";
+    pantalla = "screen4";
+
     }
         
 
@@ -76,53 +101,3 @@ class Tablero {
 
 
 
-//Instancio barcos
-
-let player1 = new Barco("Aircraft",1);
-let player2 = new Barco("Carrier",2);
-let player3 = new Barco("Submarine",3);
-let player4 = new Barco("Warship",4);
-
-
-let allBarcos = {
-  "1" : player1,
-  "2" : player2,
-  "3" : player3,
-  "4" : player4
-}
-
-
-
-const chooseShip = (barco) => {
-
-
-    if(team2.length < 2){
-
-        if(team1.length < 2){
-            team1.push(allPlayers[fighter]);
-            
-        } else {
-            
-            team2.push(allPlayers[fighter]);
-
-            if(team2.length == 2){
-                console.log("ESTE ES EL TEAM1 ", team1);
-                console.log("ESTE ES EL TEAM2 ", team2);
-                llenaEquipos();
-                cambiaFase("fase3");
-
-                setTimeout(() => {
-                    cambiaFase("fase4");
-                }, 5000);
-            }
-            
-        }
-        
-        document.getElementById(barco).onclick = "";
-        document.getElementById(barco).className = "seleccionado";
-
-        
-    }
-        
-}
-*/
