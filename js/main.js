@@ -47,6 +47,7 @@ document.addEventListener("keypress", function (event) {
         // alert(partida.turnoJugador);
         if (partida.turnoJugador == 1) {
           barcoJugador1.disparar(barcoJugador2, event.key);
+          
         } else {
           barcoJugador2.disparar(barcoJugador1, event.key);
         }
@@ -117,8 +118,11 @@ class Game {
 
   mostrarHundido(zona) {
     alert("Hundido!!!");
-    //TODO poner imagen de hundido
-    this.crearAnimacion('img/sunken3.png', 'agua','zona'+ zona, 1000);
+    //poner imagen de hundido
+    this.crearAnimacion('img/sunken3.png', 'agua','zona'+ zona);
+    
+    this.reproducirSonido('audio/hundidoS.mp3');
+
     //TODO mostrar fin de juego y opcion restart
   }
 
@@ -133,21 +137,24 @@ class Game {
     }
 
     //mostrar imagen de agua en zona
-    this.crearAnimacion('img/water.png', 'agua','zona'+ zona, 1000);
+    
+    this.crearAnimacion('img/water.png', 'agua','zona'+ zona);
+    this.reproducirSonido('audio/aguaS.mp3');
 
     this.mostrarTurno();
   }
 
   mostrarFuego() {}
 
-  crearAnimacion(archivoImagen, claseImagen, idzona, tiempoMostrado) {
+  crearAnimacion(archivoImagen, claseImagen, idzona) {
     
     //crea elemento imagen
     let img = document.createElement("img");
-
+    
     // define las propiedades
     img.src = archivoImagen; //"img/water.png";
     img.className = claseImagen; //"agua";
+
 
     //busca donde insertar el elemento
     let src = document.getElementById(idzona); //"zona" + zona);
@@ -156,11 +163,29 @@ class Game {
     src.appendChild(img);
 
     // espera 1 segundo y elimina el elemento recien creado
-    setTimeout(() => src.removeChild(img), 1000);
+    setTimeout(() => src.removeChild(img), 2000);
+    
 
     // fin seccion mostrar agua
   }
+
+  reproducirSonido(sonidoPath) {
+    let sonido = document.createElement("audio");
+    sonido.src = sonidoPath;
+    sonido.setAttribute("preload", "auto");
+    sonido.setAttribute("controls", "none");
+    sonido.style.display = "none";
+    document.body.appendChild(sonido);
+    
+ 
+    sonido.play();
+    
+    
+
+  }
 }
+
+
 
 const chooseShip = (resistencia, tipoBarco) => {
   //alert(resistencia + tipoBarco);
@@ -178,4 +203,11 @@ const chooseShip = (resistencia, tipoBarco) => {
   pantalla = "screen4";
   //poner en un div con el insert html
   partida.mostrarTurno();
-};
+
+
+}
+
+
+
+
+
