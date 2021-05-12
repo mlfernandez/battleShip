@@ -79,7 +79,11 @@ class Barco {
   disparar(Barco, aquezona) {
     // el barco dispara al barco enemigo en una zona
     //barcoEnemigo.observar(zona)
-    Barco.observar(aquezona);
+
+
+    partida.reproducirSonido('audio/canonS.mp3');
+    setTimeout(() => Barco.observar(aquezona), 2000);
+    
   }
 
   observar(zonaAtacada) {
@@ -177,10 +181,7 @@ class Game {
     sonido.style.display = "none";
     document.body.appendChild(sonido);
     
- 
     sonido.play();
-    
-    
 
   }
 }
