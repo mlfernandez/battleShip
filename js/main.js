@@ -110,7 +110,8 @@ class Game {
   }
 
   mostrarTurno() {
-    alert("Es el turno del jugador " + this.turnoJugador + " ya puede disparar a una zona del tablero.");
+    //alert("Es el turno del jugador " + this.turnoJugador + " ya puede disparar a una zona del tablero.");
+    document.getElementById("turno").innerText = ("Es el turno del jugador " + this.turnoJugador + ", ya puede disparar a una zona del tablero.");
   }
 
   mostrarHundido() { }

@@ -132,7 +132,7 @@ body {
     text-align: center;
 }
 
-/*PANTALLA 4 CHOOSE SHIP */
+/*PANTALLA 3 CHOOSE SHIP */
 
 .screen3 {
     height: 90vh;
@@ -216,6 +216,12 @@ body {
     margin-top: 5em;
     width: 95vw;
     height: 80vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+
 }
 
 .zone {
@@ -236,6 +242,19 @@ body {
     display: grid;
     grid-gap: 1rem;
   }
+
+  .infoPartida {
+
+    letter-spacing:  0.1em;
+    color: rgb(214, 214, 214);
+    font-family: 'VT323', monospace;
+    text-align: center;
+    font-size: 2em;
+    margin-top: 0.03em;
+    margin-bottom: 0.5em;
+    align-content: center;
+}
+  
   
   /* Screen larger than 600px? 2 column */
 @media (min-width: 600px) {
