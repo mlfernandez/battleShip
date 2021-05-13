@@ -213,7 +213,7 @@ body {
 
 .screen4 {
     padding: 1rem; 
-    margin-top: 5em;
+    margin-top: 2em;
     width: 95vw;
     height: 80vh;
     display:flex;
@@ -242,6 +242,7 @@ body {
     height: 30em;
     /*margin: 0 auto;*/
     display: grid;
+    margin-right: 10em;
 
     
   }
@@ -254,15 +255,28 @@ body {
     font-family: 'VT323', monospace;
     text-align: center;
     font-size: 2em;
-    margin-left: 2em;
     align-content: center;
+    display: flex;
+    flex-direction: column;
 }
   
 .datosTurno {
     align-content: center;
     text-align: center;
-    margin-right: 2em;
-    margin-bottom: 2em;
+
+}
+
+
+.contadoMuniciones{
+    width: 20em;
+    height: 20em;
+    margin-top: 3em;
+    letter-spacing:  0.1em;
+    color: rgb(214, 214, 214);
+    font-family: 'VT323', monospace;
+    text-align: center;
+    font-size: 1em;
+    align-content: center;
 }
 
 .agua {
@@ -279,3 +293,39 @@ body {
 @media (min-width: 900px) {
     .board { grid-template-columns: repeat(3, 1fr); }
   }
+
+
+/* PANTALLA 5 */
+
+.screen5 {
+    padding: 1rem; 
+    margin-top: 2em;
+    width: 95vw;
+    height: 80vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+
+}
+
+.winBoard {
+    
+    color: white;
+    padding: 1rem;
+    border: black solid;
+    text-align: center;
+    font-size: 4em;
+    font-family: 'VT323', monospace;
+    
+  }
+
+.imgWinner {
+    width: 20em;
+    height: 20em;
+    display:inline;
+    justify-content: center;
+    align-content: center;
+    
+}
