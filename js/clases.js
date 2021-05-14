@@ -25,15 +25,16 @@ class Barco {
     // se recibe un ataque se verifica si el ataque es de la misma
     // zona donde esta el barco, si es invoca a hundido, en caso contrario
     // devuelve agua
-    alert(
+    /*alert(
       "esta observando, barco ubicado en" +
         this.zonaUbicacion +
         " zona atacada" +
         zonaAtacada
-    );
+    );*/
+
     if (this.zonaUbicacion == zonaAtacada) {
       this.game.mostrarHundido(zonaAtacada);
-      this.game.mostrarGanador(turnoJugador);
+     // this.game.mostrarGanador(turnoJugador);
     } else {
       //alert("va a mostrar agua");
       this.game.mostrarAgua(zonaAtacada);
@@ -43,10 +44,11 @@ class Barco {
 
 class Game {
   constructor() {
-    //this.zona = zona;
-    //this.sizeTablero = 9;
     this.turnoJugador = 1;
+    this.ganador = false;
   }
+
+  
 
   mostrarTurno() {
     //alert("Es el turno del jugador " + this.turnoJugador + " ya puede disparar a una zona del tablero.");
@@ -58,19 +60,24 @@ class Game {
 
   mostrarHundido(zona) {
     alert("Hundido!!!");
+    
     //poner imagen de hundido
     this.crearAnimacion("img/sunken3.png", "agua", "zona" + zona);
 
     this.reproducirSonido("audio/hundidoS.mp3");
 
-    setTimeout(() => cambiarPantalla("idPantalla5"), 2000);
 
+    this.ganador = true;
+
+    //mostrar fin de juego y opcion restart
+    
     document.getElementById("winner").innerText =
       "El ganador es el jugador " +
       this.turnoJugador +
       ", presiona cualquier tecla para volver a jugar.";
+    
+      setTimeout(() => cambiarPantalla("idPantalla5"), 2000);
 
-    //TODO mostrar fin de juego y opcion restart
   }
 
   mostrarAgua(zona) {
@@ -122,16 +129,29 @@ class Game {
     sonido.play();
   }
 
+  pararSonido() {
+    let sonido = document.getElementById("audioIntro");
+    sonido.pause();
+  }
+
   mostrarMuniciones(barcoJ1, barcoJ2) {
-    //TODO mostrar un cartel con la cantidad de municiones de cada barco
+    //mostrar un cartel con la cantidad de municiones de cada barco
     document.getElementById("municionesJ1").innerText =
       "El jugador uno tiene " + barcoJ1.municiones + " municiones.";
     document.getElementById("municionesJ2").innerText =
       "El jugador dos tiene " + barcoJ2.municiones + " municiones.";
   }
+
   mostrarEmpate() {
     alert('empate!');
     cambiarPantalla('idPantalla5');
+    //document.getElementById("winner").style.display = "inline";
+
+    document.getElementById("winner").innerText =
+    "Es empate, presiona cualquier tecla para volver a jugar.";
+  
+    setTimeout(() => cambiarPantalla("idPantalla5"), 2000);
+
   } 
 };
 

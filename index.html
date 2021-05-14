@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BATTLESHIP</title>
-    
+
     <!-- css import file-->
     <link href='https://fonts.googleapis.com/css?family=IBM Plex Mono' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
 </head>
+
 <body>
+
     <!-- PANTALLA 0-->
     <div id="idPantalla0" class="screen0" style="display: inline;">
         <h1>BATTLESHIP</h1>
-            <div class="press">
-                <!--<p onclick="Hiddenfunction()"></onclick>Press any key to continue</p>-->
-                <p>Presiona cualquier tecla para continuar</p>
-            </div>
+        <audio autoplay id="audioIntro">
+            <source src="audio/intro.mp3" type="audio/mp3">
+        </audio>
+        <div class="press">
+            <p>Presiona cualquier tecla para continuar</p>
+        </div>
+    </div>
     </div>
 
     <!--PANTALLA 1-->
@@ -27,61 +33,79 @@
         <div class="border">
             <div class="textWelcome">
                 <h1>BATTLESHIP</h1>
-                    <h3>COPYRIGHT (C) 1992 USE CORP.</h3>
-                        <p>BATTLESHIP IS A TRADEMARK AND (C) 1992 MILTON BRADLEY CO., A DIVISION FROM HASBRO INC. ALL RIGHT RESERVED LICENCED BY MINDSCAPE INC.</p>
+                <h3>COPYRIGHT (C) 1992 USE CORP.</h3>
+                <p>BATTLESHIP IS A TRADEMARK AND (C) 1992 MILTON BRADLEY CO., A DIVISION FROM HASBRO INC. ALL RIGHT
+                    RESERVED LICENCED BY MINDSCAPE INC.</p>
             </div>
         </div>
-            <div class="press">
-                <!--<p onclick="Hiddenfunction()"></onclick>Press any key to continue</p>-->
-                <p>Presiona cualquier tecla para continuar</p>
-                </div>
+        <div class="press">
+            <p>Presiona cualquier tecla para continuar</p>
+        </div>
     </div>
 
     <!--PANTALLA 2-->
     <div id="idPantalla2" class="screen2" style="display: none;">
         <div class="textInstruction">
-            <h3>Cada barco tiene un nivel resistencia, para hundirlo tienes que dispararle tantas veces como sea el nivel.</h3>
+            <h3>Cada tipo de barco tiene una cantidad de municiones para utilizar, elije la dificultad que quieras, a menos municiones mayor complejidad.</h3>
         </div>
         <div class="press">
             <p>Presiona cualquier tecla para continuar</p>
-            
-            </div>
+        </div>
     </div>
-    
 
-    <!--PANTALLA 3-->   
+
+    <!--PANTALLA 3-->
     <div id="idPantalla3" class="screen3" style="display: none;">
         <div class="textChoose">
             <h5>Elije el barco</h5>
         </div>
         <div class="barcos">
-            <div class="shipShowPic" id="1" onclick="chooseShip(1, 'Aircraft')"><img class="picShip" src="img/aicraft.png">
-                <div><p>Aircraft</p></div>
-                <div><h6>Resistencia 1</h6></div>
+            <div class="shipShowPic" id="1" onclick="chooseShip(1, 'Aircraft')"><img class="picShip"
+                    src="img/aicraft.png">
+                <div>
+                    <p>Aircraft</p>
+                </div>
+                <div>
+                    <h6>Municiones 1</h6>
+                </div>
             </div>
-            <div class="shipShowPic" id="2" onclick="chooseShip(2, 'Carrier')"><img class="picShip" src="img/carrier.png">
-                <div><p>Carrier</p></div>
-                <div><h6>Resistencia 2</h6></div>
+            <div class="shipShowPic" id="2" onclick="chooseShip(2, 'Carrier')"><img class="picShip"
+                    src="img/carrier.png">
+                <div>
+                    <p>Carrier</p>
+                </div>
+                <div>
+                    <h6>Municiones 2</h6>
+                </div>
             </div>
-            <div class="shipShowPic" id="3" onclick="chooseShip(3, 'Submarine')"><img class="picShip" src="img/submarine.png">
-                <div><p>Submarine</p></div>
-                <div><h6>Resistencia 3</h6></div>
+            <div class="shipShowPic" id="3" onclick="chooseShip(3, 'Submarine')"><img class="picShip"
+                    src="img/submarine.png">
+                <div>
+                    <p>Submarine</p>
+                </div>
+                <div>
+                    <h6>Municiones 3</h6>
+                </div>
             </div>
             <div class="shipShowPic" id="4" onclick="chooseShip(4, 'Warship')"><img class="picShip" src="img/war.png">
-                <div><p>Warship</p></div>
-                <div><h6>Resistencia 4</h6></div>
+                <div>
+                    <p>Warship</p>
+                </div>
+                <div>
+                    <h6>Municiones 4</h6>
+                </div>
             </div>
         </div>
     </div>
 
-    <!--PANTALLA 4-->   
+    <!--PANTALLA 4-->
     <div id="idPantalla4" class="screen4" style="display: none;">
         <div class="infoPartida">
             <div id="turno" class="datosTurno"></div>
             <div id="municionesJ1" class="contadoMuniciones"></div>
             <div id="municionesJ2" class="contadoMuniciones"></div>
         </div>
-        <div id="tablero"class="board">
+        <div id="tablero" class="board">
             <div id="zona1" class="zone">1</div>
             <div id="zona2" class="zone">2</div>
             <div id="zona3" class="zone">3</div>
@@ -94,21 +118,23 @@
         </div>
     </div>
 
-        <!--PANTALLA 5-->   
-        <div id="idPantalla5" class="screen5" style="display: none;">
-            <div id="winner"class="winBoard"></div>
-            <div class="imgWinner"><img src="img/winner.png" style="width: 30%;" alt="winner"></div>
-            
-        </div>
+    <!--PANTALLA 5-->
+    <div id="idPantalla5" class="screen5" style="display: none;">
+        <div id="winner" class="winBoard"></div>
+
+
+        <img src="img/winner.png" style="width: 30%;" alt="winner">
+    </div>
 
     </div>
-</div>
+    </div>
 
 
-      <!-- javascript import file-->
-      <script src="js/clases.js"></script> 
-      <script src="js/main.js"></script> 
-      
-       
+    <!-- javascript import file-->
+    <script src="js/clases.js"></script>
+    <script src="js/main.js"></script>
+
+
 </body>
+
 </html>

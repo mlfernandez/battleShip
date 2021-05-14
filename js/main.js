@@ -17,6 +17,7 @@ document.addEventListener("keypress", function (event) {
     document.getElementById("idPantalla2").style.display === "inline"
   ) {
     cambiarPantalla("idPantalla3");
+
   } else if (document.getElementById("idPantalla4").style.display === "flex") {
     switch (event.key) {
       case "1":
@@ -40,11 +41,12 @@ document.addEventListener("keypress", function (event) {
         // actualizo y muestro
         partida.mostrarMuniciones(barcoJugador1, barcoJugador2);
 
-        //TODO chequear que queden municiones para poder disparar
+        //chequear que queden municiones para poder disparar
         if (barcoJugador1.municiones == 0) {
           if (barcoJugador2.municiones == 0) {
+            if (partida.ganador != true) {
             partida.mostrarEmpate();
-          }
+          }}
         } 
 
          break; 
@@ -57,7 +59,7 @@ document.addEventListener("keypress", function (event) {
   } else if (
     document.getElementById("idPantalla5").style.display === "inline"
   ) {
-    //TODO reiniciar la partida
+    //reiniciar la partida
     //1 - ir a pantalla 3 (elegir barco)
     cambiarPantalla("idPantalla3");
   } else {
@@ -74,7 +76,12 @@ const chooseShip = (municiones, tipoBarco) => {
   cambiarPantalla("idPantalla4");
   document.getElementById("idPantalla4").style.display = "flex";
   //poner en un div con el insert html
+  
   partida.mostrarTurno();
+  //setTimeout(() => partida.mostrarTurno(),3000);
+  partida.pararSonido();
+  
 
   partida.mostrarMuniciones(barcoJugador1, barcoJugador2);
+
 };
