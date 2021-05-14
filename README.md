@@ -9,7 +9,9 @@
 
 :clipboard: [Instrucciones de juego](#id3)
 
-:eye_speech_bubble: [Visita la página](#id4)
+:eye_speech_bubble: [Futuras mejoras](#id4)
+
+:eye_speech_bubble: [Visita la página](#id5)
 
 
 
@@ -19,12 +21,13 @@
 <a name="id1"></a>
 ## Acerca del proyecto 
 
-Realización de un juego de pelea como proyecto para el bootcamp de Full Stack Developer de [GeeksHubs Academy](https://bootcamp.geekshubsacademy.com/).
+Realización de un juego de pelea como proyecto para el bootcamp de **Full Stack Developer** de [GeeksHubs Academy](https://bootcamp.geekshubsacademy.com/).
 
 Fecha de inicio: 11 Mayo de 2021.
 
 Fecha máxima de entrega: 16 Mayo de 2021.
 
+![Captura](img/screen0img.jpg)
 
 <a name="id2"></a>
 ## Características del proyecto
@@ -50,18 +53,31 @@ Para la realización de este trabajo contamos con las siguientes herramientas y 
 ## Instrucciones de juego
 
 Para avanzar por las pantallas solo es necesario presionar cualquier tecla del teclado.
-Luego hay que seleccionar el barco con el cual jugar, según el nivel de dificultad deseado. 
 
-Nivel 1 = Municiones 4 (Tu y tu oponente tienen 4 tiros para hundir el barco enemigo)
+Cuando estamos en la pantalla de "Elegir barco" tienes que seleccionar el barco con el cual deseas jugar según el nivel de dificultad deseado. 
 
-Nivel 2 = Municiones 3 (Tu y tu oponente tienen 4 tiros para hundir el barco enemigo)
+* **Nivel 1** = Municiones 4 (Tú y el barco enemigo tienen 4 tiros para hundir el barco enemigo)
 
-Nivel 3 = Municiones 2 (Tu y tu oponente tienen 4 tiros para hundir el barco enemigo)
+* **Nivel 2** = Municiones 3 (Tú y el barco enemigo tienen 3 tiros para hundir el barco enemigo)
 
-Nivel 4 = Municiones 1 (Tu y tu oponente tienen 4 tiros para hundir el barco enemigo)
+* **Nivel 3** = Municiones 2 (Tú y el barco enemigo tienen 3 tiros para hundir el barco enemigo)
 
+* **Nivel 4** = Municiones 1 (Tú y el barco enemigo tienen 4 tiros para hundir el barco enemigo)
 
-<a name="id4"></a>
+![Captura](img/screen4img.jpg)
+
+Una vez elegido ya estarás dentro del juego. En la pantalla encontraras el turno del jugador y la cantidad de municiones restantes para cada uno. Utiliza los números del teclado para elegir donde quieres disparar y suerte!
+
+![Captura](img/screen5img.jpg)
+
+<a name="id2"></a>
+## Futuras mejoras
+
+* Aumentar la cuadricula de juego y darles a cada barco una cantidad de cuadrantes según el modelo de barco como el juego original.
+
+* Que el posicionamiento de los barcos en la cuadricula no sea aleatorio, que lo pueda realizar cada jugador arrastrando el barco al tablero. 
+
+<a name="id5"></a>
 ## Visita la página del proyecto en GitHub
 
 [BattleShip](https://mlfernandez.github.io/battleShip/)
