@@ -27,7 +27,7 @@ Fecha de inicio: 11 Mayo de 2021.
 
 Fecha máxima de entrega: 16 Mayo de 2021.
 
-![Captura](img/screen0img.jpg)
+![Captura](img/screen0img.JPG)
 
 <a name="id2"></a>
 ## Características del proyecto
@@ -64,11 +64,11 @@ Cuando estamos en la pantalla de "Elegir barco" tienes que seleccionar el barco 
 
 * **Nivel 4** = Municiones 1 (Tú y el barco enemigo tienen 4 tiros para hundir el barco enemigo)
 
-![Captura](img/screen4img.jpg)
+![Captura](img/screen4img.JPG)
 
 Una vez elegido ya estarás dentro del juego. En la pantalla encontraras el turno del jugador y la cantidad de municiones restantes para cada uno. Utiliza los números del teclado para elegir donde quieres disparar y suerte!
 
-![Captura](img/screen5img.jpg)
+![Captura](img/screen5img.JPG)
 
 <a name="id2"></a>
 ## Futuras mejoras
