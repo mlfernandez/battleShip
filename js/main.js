@@ -17,7 +17,6 @@ document.addEventListener("keypress", function (event) {
     document.getElementById("idPantalla2").style.display === "inline"
   ) {
     cambiarPantalla("idPantalla3");
-
   } else if (document.getElementById("idPantalla4").style.display === "flex") {
     switch (event.key) {
       case "1":
@@ -31,7 +30,6 @@ document.addEventListener("keypress", function (event) {
       case "9":
         // alert(partida.turnoJugador);
         partida.reproducirSonido("audio/canonS.mp3");
-        //setTimeout(() => (""), 2000);
 
         if (partida.turnoJugador == 1) {
           barcoJugador1.disparar(barcoJugador2, event.key);
@@ -45,22 +43,20 @@ document.addEventListener("keypress", function (event) {
         if (barcoJugador1.municiones == 0) {
           if (barcoJugador2.municiones == 0) {
             if (partida.ganador != true) {
-            partida.mostrarEmpate();
-          }}
-        } 
-
-         break; 
-         
+              partida.mostrarEmpate();
+            }
+          }
         }
-        
-    
+
+        break;
+    }
 
     // cuando entra en pantalla 5
   } else if (
     document.getElementById("idPantalla5").style.display === "inline"
   ) {
     //reiniciar la partida
-    //1 - ir a pantalla 3 (elegir barco)
+    //ir a pantalla 3 (elegir barco)
     cambiarPantalla("idPantalla3");
   } else {
   }
@@ -73,15 +69,14 @@ const chooseShip = (municiones, tipoBarco) => {
   barcoJugador2 = new Barco(partida, tipoBarco, municiones);
 
   // voy a mostrar la pantalla tablero screen4
+  //poner en un div con el insert html
   cambiarPantalla("idPantalla4");
   document.getElementById("idPantalla4").style.display = "flex";
-  //poner en un div con el insert html
-  
+
+
   partida.mostrarTurno();
-  //setTimeout(() => partida.mostrarTurno(),3000);
+ 
   partida.pararSonido();
-  
 
   partida.mostrarMuniciones(barcoJugador1, barcoJugador2);
-
 };

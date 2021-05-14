@@ -7,7 +7,7 @@ class Barco {
   }
 
   disparar(aQueBarco, aQueZona) {
-    // el barco dispara al barco enemigo en una zona
+    //el barco dispara al barco enemigo en una zona
     //barcoEnemigo.observar(zona)
 
     // se comprueba que tenga municiones para poder disparar
@@ -34,7 +34,7 @@ class Barco {
 
     if (this.zonaUbicacion == zonaAtacada) {
       this.game.mostrarHundido(zonaAtacada);
-     // this.game.mostrarGanador(turnoJugador);
+      
     } else {
       //alert("va a mostrar agua");
       this.game.mostrarAgua(zonaAtacada);
@@ -48,8 +48,6 @@ class Game {
     this.ganador = false;
   }
 
-  
-
   mostrarTurno() {
     //alert("Es el turno del jugador " + this.turnoJugador + " ya puede disparar a una zona del tablero.");
     document.getElementById("turno").innerText =
@@ -60,24 +58,22 @@ class Game {
 
   mostrarHundido(zona) {
     alert("Hundido!!!");
-    
+
     //poner imagen de hundido
     this.crearAnimacion("img/sunken3.png", "agua", "zona" + zona);
 
     this.reproducirSonido("audio/hundidoS.mp3");
 
-
     this.ganador = true;
 
     //mostrar fin de juego y opcion restart
-    
+
     document.getElementById("winner").innerText =
       "El ganador es el jugador " +
       this.turnoJugador +
       ", presiona cualquier tecla para volver a jugar.";
-    
-      setTimeout(() => cambiarPantalla("idPantalla5"), 2000);
 
+    setTimeout(() => cambiarPantalla("idPantalla5"), 2000);
   }
 
   mostrarAgua(zona) {
@@ -143,17 +139,15 @@ class Game {
   }
 
   mostrarEmpate() {
-    alert('empate!');
-    cambiarPantalla('idPantalla5');
-    //document.getElementById("winner").style.display = "inline";
+    alert("empate!");
+    cambiarPantalla("idPantalla5");
 
     document.getElementById("winner").innerText =
-    "Es empate, presiona cualquier tecla para volver a jugar.";
-  
-    setTimeout(() => cambiarPantalla("idPantalla5"), 2000);
+      "Es empate, presiona cualquier tecla para volver a jugar.";
 
-  } 
-};
+    setTimeout(() => cambiarPantalla("idPantalla5"), 2000);
+  }
+}
 
 const cambiarPantalla = (destinoPantalla) => {
   let arrPantalla = [
@@ -172,4 +166,4 @@ const cambiarPantalla = (destinoPantalla) => {
       document.getElementById(i).style.display = "none";
     }
   }
-}
+};
