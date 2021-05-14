@@ -57,7 +57,7 @@ class Game {
   }
 
   mostrarHundido(zona) {
-    alert("Hundido!!!");
+    //alert("Hundido!!!");
 
     //poner imagen de hundido
     this.crearAnimacion("img/sunken3.png", "agua", "zona" + zona);
@@ -73,7 +73,7 @@ class Game {
       this.turnoJugador +
       ", presiona cualquier tecla para volver a jugar.";
 
-    setTimeout(() => cambiarPantalla("idPantalla5"), 2000);
+    setTimeout(() => cambiarPantalla("idPantalla5"), 2500);
   }
 
   mostrarAgua(zona) {
@@ -139,13 +139,15 @@ class Game {
   }
 
   mostrarEmpate() {
-    alert("empate!");
-    cambiarPantalla("idPantalla5");
+    //alert("empate!");
+
+    setTimeout(() => cambiarPantalla("idPantalla5"), 4000);
+    
 
     document.getElementById("winner").innerText =
       "Es empate, presiona cualquier tecla para volver a jugar.";
 
-    setTimeout(() => cambiarPantalla("idPantalla5"), 2000);
+    
   }
 }
 
