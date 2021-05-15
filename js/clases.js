@@ -146,8 +146,6 @@ class Game {
 
     document.getElementById("winner").innerText =
       "Es empate, presiona cualquier tecla para volver a jugar.";
-
-    
   }
 }
 
